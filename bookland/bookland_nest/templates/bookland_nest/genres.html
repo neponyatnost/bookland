@@ -1,0 +1,16 @@
+{% extends "bookland_nest/base.html" %}
+{% block content %}
+    
+    <p>Genres:</p>
+    <ul>
+        {% for genre in genres %}
+            <li>
+                <a href="{% url 'bookland_nest:genre' genre.id %}">{{ genre.name }}</a>
+            </li>
+        {% empty %}
+            <p>No genres yet.</p>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'bookland_nest:create_genre' %}">Create new genre</a>
+{% endblock content %}

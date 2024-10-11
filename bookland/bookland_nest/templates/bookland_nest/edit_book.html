@@ -1,0 +1,10 @@
+{% extends 'bookland_nest/base.html' %}
+{% block content %}
+    <a href="{% url 'bookland_nest:genre' genre.id %}">{{ genre }}</a>
+    <p>Edit book:</p>
+    <form action="{% url 'bookland_nest:edit_book' book.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button name="submit">Save</button>
+    </form>
+{% endblock content %}

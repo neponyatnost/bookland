@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Project</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<p>
+    <a href="{% url "bookland_nest:index" %}">Bookland Nest</a>
+    <a href="{% url "bookland_nest:genres" %}">Genres</a>
+    {% if user.is_authenticated %}
+    	Hi, {{ user.username|title }}
+        {% else %}
+        <a href="{% url 'accounts:login' %}">Login</a>
+        <span> or </span>
+        <a href="{% url 'accounts:register' %}">Register</a>
+    {% endif %} 
+</p>
+
+{% block content %}
+{% endblock content %}
+
+{% if user.is_authenticated %}
+    <hr />
+    <form action="{% url 'accounts:logout' %}" method="post">
+        {% csrf_token %}
+        <button>Logout</button>
+    </form>
+{% endif %} 

@@ -1,0 +1,21 @@
+{% extends 'bookland_nest/base.html' %}
+
+{% block content %}
+    <a href="{% url 'bookland_nest:create_book' genre.id %}">Create new book</a>
+    <p>{{ genre.name }}</p>
+
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="">{{ book.title }}</a>
+                <p>{{ book.date_added|date:'d M, Y, h:m' }}</p>
+                <p>{{ book.description|linebreaks }}</p>
+                <a href="{% url 'bookland_nest:edit_book' book.id %}">Edit book</a>
+                <hr/>
+            </li>
+        {% empty %}
+            <p>No books found.</p>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

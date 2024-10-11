@@ -1,0 +1,9 @@
+{% extends 'bookland_nest/base.html' %}
+{% block content %}
+    <h1>Create account:</h1>
+	<form action="{% url 'accounts:register' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button name="submit">Registration!</button>
+    </form>
+{% endblock content %}

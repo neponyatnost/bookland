@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a44caa8-3104-4a8e-a7e5-586b0d655839" name="Changes" comment="started django project">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0a44caa8-3104-4a8e-a7e5-586b0d655839" name="Changes" comment="Initialize Bookland Nest app with models and admin setup&#10;&#10;Create initial migrations for Book and Genre models with necessary fields. Register Book model in admin, and set up basic configurations and placeholder files for views, tests, and database connection.">
+      <change afterPath="$PROJECT_DIR$/bookland/accounts/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/accounts/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/create_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/create_genre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/edit_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genres.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genres.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookland/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/book-tracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/book-tracker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookland/bookland/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookland/bookland/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookland/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +64,9 @@
     &quot;accountId&quot;: &quot;e7da8115-52e4-45dd-84c1-16eb974a5064&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -42,23 +78,68 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.Unnamed.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/projects/book-tracker",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\book-tracker\bookland\bookland_nest\templates\bookland_nest" />
       <recent name="D:\projects\book-tracker" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
+      <module name="book-tracker" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="user" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (book-tracker)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -79,7 +160,8 @@
       <workItem from="1728555756951" duration="2557000" />
       <workItem from="1728558364692" duration="269000" />
       <workItem from="1728558651729" duration="1043000" />
-      <workItem from="1728559724392" duration="1649000" />
+      <workItem from="1728559724392" duration="10808000" />
+      <workItem from="1728634400067" duration="12541000" />
     </task>
     <task id="LOCAL-00001" summary="started django project">
       <option name="closed" value="true" />
@@ -105,7 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728556589397</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add database navigator and theme configuration&#10;&#10;Introduced new configuration files for Material Theme and DB Navigator. Updated workspace settings to reflect these changes and adjusted the `settings.py` to include the 'bookland_nest' app.">
+      <option name="closed" value="true" />
+      <created>1728561548091</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728561548092</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initialize Bookland Nest app with models and admin setup&#10;&#10;Create initial migrations for Book and Genre models with necessary fields. Register Book model in admin, and set up basic configurations and placeholder files for views, tests, and database connection.">
+      <option name="closed" value="true" />
+      <created>1728561645561</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728561645561</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +222,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started django project" />
-    <option name="LAST_COMMIT_MESSAGE" value="started django project" />
+    <MESSAGE value="Add database navigator and theme configuration&#10;&#10;Introduced new configuration files for Material Theme and DB Navigator. Updated workspace settings to reflect these changes and adjusted the `settings.py` to include the 'bookland_nest' app." />
+    <MESSAGE value="Initialize Bookland Nest app with models and admin setup&#10;&#10;Create initial migrations for Book and Genre models with necessary fields. Register Book model in admin, and set up basic configurations and placeholder files for views, tests, and database connection." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialize Bookland Nest app with models and admin setup&#10;&#10;Create initial migrations for Book and Genre models with necessary fields. Register Book model in admin, and set up basic configurations and placeholder files for views, tests, and database connection." />
   </component>
 </project>
