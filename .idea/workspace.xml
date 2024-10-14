@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a44caa8-3104-4a8e-a7e5-586b0d655839" name="Changes" comment="Enhance book and genre management features&#10;&#10;Added functionality for creating, editing, and deleting books and genres with improved views and templates using Django Bootstrap 5. Integrated user authentication and permissions to manage books and genres, ensuring user-specific data handling. Enhanced overall UI with CSS and updated navigation elements for a better user experience.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +143,7 @@
       <workItem from="1728895319866" duration="7836000" />
       <workItem from="1728904208899" duration="321000" />
       <workItem from="1728904542803" duration="898000" />
+      <workItem from="1728905498786" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="started django project">
       <option name="closed" value="true" />
