@@ -7,24 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a44caa8-3104-4a8e-a7e5-586b0d655839" name="Changes" comment="Add features for book and genre management&#10;&#10;Integrated views and templates for creating and editing books and genres. Added CSS styling and URL routing configurations, and modified admin and settings for proper app functionality.">
-      <change afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/delete_book.html" afterDir="false" />
+    <list default="true" id="0a44caa8-3104-4a8e-a7e5-586b0d655839" name="Changes" comment="Enhance book and genre management features&#10;&#10;Added functionality for creating, editing, and deleting books and genres with improved views and templates using Django Bootstrap 5. Integrated user authentication and permissions to manage books and genres, ensuring user-specific data handling. Enhanced overall UI with CSS and updated navigation elements for a better user experience.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/accounts/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/accounts/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/accounts/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/accounts/templates/registration/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/create_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/create_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/create_genre.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/create_genre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/edit_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/edit_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genre.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genres.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genres.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/genres.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/templates/bookland_nest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/bookland_nest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/bookland_nest/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookland/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/bookland/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +140,9 @@
       <workItem from="1728558651729" duration="1043000" />
       <workItem from="1728559724392" duration="10808000" />
       <workItem from="1728634400067" duration="15766000" />
-      <workItem from="1728895319866" duration="7146000" />
+      <workItem from="1728895319866" duration="7836000" />
+      <workItem from="1728904208899" duration="321000" />
+      <workItem from="1728904542803" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="started django project">
       <option name="closed" value="true" />
@@ -206,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728651498847</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Enhance book and genre management features&#10;&#10;Added functionality for creating, editing, and deleting books and genres with improved views and templates using Django Bootstrap 5. Integrated user authentication and permissions to manage books and genres, ensuring user-specific data handling. Enhanced overall UI with CSS and updated navigation elements for a better user experience.">
+      <option name="closed" value="true" />
+      <created>1728902594598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728902594598</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +222,7 @@
     <MESSAGE value="Add database navigator and theme configuration&#10;&#10;Introduced new configuration files for Material Theme and DB Navigator. Updated workspace settings to reflect these changes and adjusted the `settings.py` to include the 'bookland_nest' app." />
     <MESSAGE value="Initialize Bookland Nest app with models and admin setup&#10;&#10;Create initial migrations for Book and Genre models with necessary fields. Register Book model in admin, and set up basic configurations and placeholder files for views, tests, and database connection." />
     <MESSAGE value="Add features for book and genre management&#10;&#10;Integrated views and templates for creating and editing books and genres. Added CSS styling and URL routing configurations, and modified admin and settings for proper app functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add features for book and genre management&#10;&#10;Integrated views and templates for creating and editing books and genres. Added CSS styling and URL routing configurations, and modified admin and settings for proper app functionality." />
+    <MESSAGE value="Enhance book and genre management features&#10;&#10;Added functionality for creating, editing, and deleting books and genres with improved views and templates using Django Bootstrap 5. Integrated user authentication and permissions to manage books and genres, ensuring user-specific data handling. Enhanced overall UI with CSS and updated navigation elements for a better user experience." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance book and genre management features&#10;&#10;Added functionality for creating, editing, and deleting books and genres with improved views and templates using Django Bootstrap 5. Integrated user authentication and permissions to manage books and genres, ensuring user-specific data handling. Enhanced overall UI with CSS and updated navigation elements for a better user experience." />
   </component>
 </project>
