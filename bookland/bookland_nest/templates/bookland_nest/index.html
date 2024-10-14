@@ -1,6 +1,13 @@
 {% extends 'bookland_nest/base.html' %}
 
 {% block content %}
-
-    <p>Add your books and keep track of your reading habits</p>
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Bookland Nest</h1>
+        <p class="lead">Create your unique book collection and effortlessly track your reading habits.</p>
+        <hr class="my-4">
+        <p>Add new books, mark them as read or unread, share your thoughts, and get recommendations for your next read.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'bookland_nest:genres' %}" role="button">Start Adding Books</a>
+    </div>
+</div>
 {% endblock content %}

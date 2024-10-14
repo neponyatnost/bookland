@@ -1,21 +1,38 @@
 {% extends 'bookland_nest/base.html' %}
+{% load django_bootstrap5 %}
+{% block page_header %}
+    <div class="bg-primary text-white p-3 rounded">
+        <h1 class="display-4">{{ genre }}</h1>
+    </div>
+{% endblock page_header %}
 
 {% block content %}
-    <a href="{% url 'bookland_nest:create_book' genre.id %}">Create new book</a>
-    <p>{{ genre.name }}</p>
-
-    <ul>
-        {% for book in books %}
-            <li>
-                <a href="">{{ book.title }}</a>
-                <p>{{ book.date_added|date:'d M, Y, h:m' }}</p>
-                <p>{{ book.description|linebreaks }}</p>
-                <a href="{% url 'bookland_nest:edit_book' book.id %}">Edit book</a>
-                <hr/>
-            </li>
-        {% empty %}
-            <p>No books found.</p>
-        {% endfor %}
-    </ul>
-
+    <div class="container mt-4">
+        <a href="{% url 'bookland_nest:create_book' genre.id %}" class="btn btn-success my-3">Create new book</a>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="card-title">{{ genre.name }}</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for book in books %}
+                        <li class="list-group-item">
+                            <h3 class="my-3">{{ book.title }}</h3>
+                            <p class="text-muted">Added on: {{ book.date_added|date:'d M, Y, h:m' }}</p>
+                            <p>{{ book.description|linebreaks }}</p>
+                            <div class="button-group mt-3">
+                                <a href="{% url 'bookland_nest:edit_book' book.id %}" class="btn btn-primary">Edit
+                                    book</a>
+                                <a href="{% url 'bookland_nest:delete_book' book.id %}" class="btn btn-danger">Delete
+                                    book</a>
+                            </div>
+                            <hr/>
+                        </li>
+                    {% empty %}
+                        <li class="list-group-item">No books found.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

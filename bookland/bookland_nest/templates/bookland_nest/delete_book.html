@@ -1,0 +1,22 @@
+{% extends 'bookland_nest/base.html' %}
+{% block page_header %}
+    <div class="bg-primary text-white p-3 rounded">
+        <h1 class="display-4">Delete book</h1>
+    </div>
+{% endblock page_header %}
+{% block content %}
+    <div class="container mt-4">
+        <div class="alert alert-warning" role="alert">
+            <h5 class="alert-heading">Confirm Deletion</h5>
+            <p>Are you sure you want to delete the book <strong>"{{ book.title }}"</strong>?</p>
+        </div>
+        <form action="{% url 'bookland_nest:delete_book' book.id %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="d-flex justify-content-between mt-3">
+                <button type="submit" class="btn btn-danger">Yes, delete</button>
+                <a href="{% url 'bookland_nest:genre' genre.id %}" class="btn btn-secondary">No, I'm not</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

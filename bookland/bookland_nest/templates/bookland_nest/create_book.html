@@ -1,10 +1,25 @@
 {% extends 'bookland_nest/base.html' %}
+{% load django_bootstrap5 %}
+{% block page_header %}
+    <div class="bg-primary text-white p-3 rounded">
+        <h1 class="display-4">Create new book</h1>
+    </div>
+{% endblock page_header %}
+
 {% block content %}
-    <a href="{% url 'bookland_nest:genre' genre.id %}">{{ genre.name }}</a>
-	<p>Create new book:</p>
-    <form action="{% url 'bookland_nest:create_book' genre.id %}" method="post">
-        {% csrf_token %}
-        {{ form.as_div }}
-        <button name="submit">Create</button>
-    </form>
+    <div class="container mt-4">
+        <a href="{% url 'bookland_nest:genre' genre.id %}" class="btn btn-info mb-3">{{ genre.name }}</a>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Create new book</h2>
+            </div>
+            <div class="card-body">
+                <form action="{% url 'bookland_nest:create_book' genre.id %}" method="post">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {% bootstrap_button button_type="submit" content="Create" %}
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
