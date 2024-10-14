@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tpi6u7#lcwi3w=bccg=n5-^-$wk@d4f5x$!su-m7#2q%prjn%g
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://pure-hollows-79377-5cf7b27c0f2d.herokuapp.com'
+    'pure-hollows-79377-5cf7b27c0f2d.herokuapp.com'
 ]
 
 # Application definition
